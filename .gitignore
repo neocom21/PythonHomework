@@ -171,3 +171,7 @@ cython_debug/
 .pypirc
 /.idea/.gitignore
 /.idea/vcs.xml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/inspectionProfiles/profiles_settings.xml
+/.idea/PythonHomework.iml
