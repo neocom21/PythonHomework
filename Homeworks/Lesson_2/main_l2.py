@@ -1,11 +1,6 @@
-print("fdkfd")
+a = 5
+b = 10
 
-print("ffmmfmfm")
+# your code here
 
-print("ffmmfmfm")
-
-i = 1
-
-i1 = i + 2
-
-print(i1)
+print(a * b)
