@@ -1,3 +1,1 @@
-print("fnfnf")
-
-print("fnfnf")
+print('Hello World!')
