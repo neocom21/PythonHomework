@@ -8,7 +8,7 @@ list5 = [] #=> [[], []]
 
 list_result =[]
 
-list_my=list1 #  присвоїти необхідний тестовий список listX до змінної list_my
+list_my=list(list1) #  присвоїти необхідний тестовий список listX до змінної list_my
 
 seredina = (len(list_my) + 1) // 2
 

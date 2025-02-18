@@ -11,7 +11,7 @@ list5 = [] #=> [[], []]
 
 list_result =[]
 
-list_my=list4 #  присвоїти необхідний тестовий список listX до змінної list_my
+list_my=list(list4) #  присвоїти необхідний тестовий список listX до змінної list_my
 
 seredina = (len(list_my))//2
 
