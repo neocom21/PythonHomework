@@ -40,7 +40,8 @@ elif any(c.isupper() for c in my_variable):
     rez = False
 elif my_variable in keyword.kwlist:
     rez = False
-elif "__" in my_variable:
+#elif "__" in my_variable:
+elif len(my_variable) > 1 and my_variable.count("_")==len(my_variable):
     rez = False
 elif any(char in my_string_punctuation for char in my_variable):
     rez = False
