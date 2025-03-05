@@ -1,0 +1,1 @@
+/Users/vinogradovsergey/PythonHomework/Homeworks/Lesson_6_2/ls_6_2 copy.py
