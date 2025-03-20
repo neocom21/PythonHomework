@@ -1,20 +1,16 @@
-def counter(func):
-    count = 0  # Лічильник викликів
+def prime_generator(end):
+    primes = [2]
+    yield 2  # Первое простое число
 
-    def wrapper(*args, **kwargs):
-        nonlocal count  # Доступ до змінної у зовнішній функції
-        count += 1
-        print(f"Функція {func.__name__} викликана {count} раз(и)")
-        return func(*args, **kwargs)  # Викликаємо оригінальну функцію
+    for i in range(3, end + 1, 2):  # Проверяем только нечётные числа
+        for j in primes:
+            if j * j > i:  # Если j больше sqrt(i) → дальше проверять не нужно
+                break
+            if i % j == 0:  # Если i делится на j → не простое
+                break
+        else:  # Если `break` не сработал на делении, то число простое
+            primes.append(i)
+            yield i
 
-    return wrapper  # Повертаємо обгортку
+print(list(prime_generator(10)))
 
-
-@counter
-def example_function():
-    print("Inside the function")
-
-
-example_function()
-example_function()
-example_function()
