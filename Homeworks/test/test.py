@@ -1,16 +1,13 @@
-def prime_generator(end):
-    primes = [2]
-    yield 2  # Первое простое число
+def linear_search(arr, target):
+    # Ваш код тут
 
-    for i in range(3, end + 1, 2):  # Проверяем только нечётные числа
-        for j in primes:
-            if j * j > i:  # Если j больше sqrt(i) → дальше проверять не нужно
-                break
-            if i % j == 0:  # Если i делится на j → не простое
-                break
-        else:  # Если `break` не сработал на делении, то число простое
-            primes.append(i)
-            yield i
+    for i in range(len(arr)):
+        if arr[i] == target:
+            return i
 
-print(list(prime_generator(10)))
+    return -1
+
+
+# Перевірка
+linear_search([64, 34, 25, 12, 22, 11, 90], 22)
 
