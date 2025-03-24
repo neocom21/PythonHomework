@@ -10,7 +10,9 @@ def delete_html_tags(html_file, result_file='cleaned.txt'):
           matches = re.findall(r'<(title|h[1-6]|p)>(.*?)</\1>', html)
           #print(matches)
 
-          with codecs.open(result_file, 'w')  as f:
+
+          # Записуємо очищений текст у файл
+          with codecs.open(result_file, 'w', 'utf-8')  as f:
 
               for match in matches:
                   #print(match[1])
