@@ -1,13 +1,17 @@
-def linear_search(arr, target):
-    # Ваш код тут
+class Rectangle:
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
 
-    for i in range(len(arr)):
-        if arr[i] == target:
-            return i
-
-    return -1
+    def calculate_area(self):
+        return self.width * self.height  # працює і для квадрата
 
 
-# Перевірка
-linear_search([64, 34, 25, 12, 22, 11, 90], 22)
+class Square(Rectangle):
+    def __init__(self, side):
+        super().__init__(side, side)  # Просто передаємо один параметр в обидва
 
+
+# Перевірка:
+square = Square(5)
+assert square.calculate_area() == 25
