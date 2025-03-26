@@ -1,28 +1,7 @@
-def capture_stdout(func):
-    return func()  # Просто викликаємо функцію та повертаємо її результат
-
-
-class A:
-    def show(self):
-        return "A"
-
-
-class B(A):
-    def show(self):
-        return "B"
-
-
-class C(A):
-    def show(self):
-        return "C"
-
-
-class D(B, C):
-    def show(self):
-        return "D"
-
+def check_positive(value):
+    if value <= 0:
+        raise ValueError("Value must be positive")
 
 # Перевірка
-obj_D = D()
-output_D = capture_stdout(obj_D.show)
-assert output_D == 'D'
+check_positive(5)  # Очікуваний результат: (без виводу, так як немає помилки)
+check_positive(-3)  # Очікуваний результат: ValueError: Value must be positive
