@@ -22,14 +22,14 @@ class Student(Human):
         return f'{super().__str__()}, Record book: {self.record_book}'
 
 class Group:
+    max_value = 10  # атрибут класу
 
-    def __init__(self, number, max_value=10):
+    def __init__(self, number):
         self.number = number
         self.group = set()
-        self.max_value = max_value
 
     def add_student(self, student):
-        if len(self.group) >= self.max_value:
+        if len(self.group) >= Group.max_value:
             raise GroupLimitError("Достигнуто максимальну кількість студентів у групі!")
         self.group.add(student)  # Используем append() вместо add()
 
@@ -88,7 +88,7 @@ try:
     gr.add_student(st8)
     gr.add_student(st9)
     gr.add_student(st10)
-    gr.add_student(st11)
+    #gr.add_student(st11)
 
 
     print(gr)
